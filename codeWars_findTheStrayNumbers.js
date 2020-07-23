@@ -36,4 +36,16 @@ function stray(numbers) {
     }
     console.log(min);
   });
+
+  //Altenative solution
+  let sorted = numbers.sort((a,b)=>{ return a - b});
+  let odd = [];
+    
+  console.log(sorted)
+  
+  for(let i = sorted[0]; i < sorted; i++){
+    if(sorted(i) != sorted(i+1){
+    odd.push(sorted(i))
+    }
+  }
 }
