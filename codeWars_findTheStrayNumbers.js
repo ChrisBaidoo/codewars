@@ -1,83 +1,25 @@
 function stray(numbers) {
-  //sort the array
-  let sorted = numbers.sort((a, b) => {
-    a - b;
-  });
-
-  //push odd one into an array
-  let odd = [];
-  for (let i = 0; i < sorted.length; i++) {
-    if (sorted(i) !== sorted(i + 1)) {
-      odd.push(i);
-    }
-  }
-  //     sorted.map((num)=>{
-  //       if(num !== sorted[num+1]){
-  //         odd.push(num)
-  //       }
-  //     })
-  console.log(sorted);
-  console.log(odd);
-}
-
-function stray(numbers) {
-  //sort the array
   let sorted = numbers.sort((a, b) => {
     a - b;
   });
   let odd = [];
+  let groupA = [];
+  let groupB = [];
 
   let max = Math.max(...sorted);
   let min = Math.min(...sorted);
 
   sorted.map((num) => {
     if (num == max) {
-      console.log(max);
+      return groupA.push(num);
     }
-    console.log(min);
+    return groupB.push(num);
   });
 
-  //Altenative solution
-  let sorted = numbers.sort((a,b)=>{ return a - b});
-  let odd = [];
-    
-  console.log(sorted)
-  
-  for(let i = sorted[0]; i < sorted; i++){
-    if(sorted(i) != sorted(i+1){
-    odd.push(sorted(i))
-    }
-  }
-}
+  console.log(groupA);
+  console.log(groupB);
 
-
-
-
-
-function stray(numbers) {
-  let sorted = numbers.sort((a, b) => {
-   a - b;
- });
- let odd = [];
- let groupA = []
- let groupB = []
-
- let max = Math.max(...sorted);
- let min = Math.min(...sorted);
-
- sorted.map((num) => {
-   if (num == max) {
-    return groupA.push(num)
-   }
-   if(num == min){
-     return groupB.push(num)
-
-   }
- });
- 
- if(groupA.length > groupB.length){
-   console.log(groupA)
- }
-   else console.log(groupB)
-
+  if (groupA.length < groupB.length) {
+    return groupA[0];
+  } else return groupB[0];
 }
