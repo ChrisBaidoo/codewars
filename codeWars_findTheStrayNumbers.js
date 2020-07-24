@@ -49,3 +49,35 @@ function stray(numbers) {
     }
   }
 }
+
+
+
+
+
+function stray(numbers) {
+  let sorted = numbers.sort((a, b) => {
+   a - b;
+ });
+ let odd = [];
+ let groupA = []
+ let groupB = []
+
+ let max = Math.max(...sorted);
+ let min = Math.min(...sorted);
+
+ sorted.map((num) => {
+   if (num == max) {
+    return groupA.push(num)
+   }
+   if(num == min){
+     return groupB.push(num)
+
+   }
+ });
+ 
+ if(groupA.length > groupB.length){
+   console.log(groupA)
+ }
+   else console.log(groupB)
+
+}
