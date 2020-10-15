@@ -20,5 +20,5 @@ function stray(numbers) {
 
   if (groupA.length < groupB.length) {
     return groupA[0];
-  } else return groupB[0];
+  } return groupB[0];
 }

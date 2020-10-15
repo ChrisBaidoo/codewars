@@ -10,6 +10,5 @@ function mxdiflg(a1, a2) {
       return item.length
     })
     console.log(Math.min(...min))
-      
         return max-min
     }
