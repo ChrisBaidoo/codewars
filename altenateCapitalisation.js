@@ -2,3 +2,12 @@
 //For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
 //The input will be a lowercase string with no spaces.
 
+function capitalize(s){
+    let arrayOfLetters = s.split('')
+    let sort = arrayOfLetters.map((letter)=>{
+      if(indexOf(letter) % 2 === 0){
+        return letter.toUpperCase()
+      } return letter
+    })
+    console.log(sort)
+    };
