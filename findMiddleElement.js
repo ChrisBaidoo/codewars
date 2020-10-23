@@ -4,13 +4,13 @@
 //The input to the function will be an array of three distinct numbers
 
 var gimme = function (inputArray) {
-  
-    console.log(inputArray)
-    let sorted = inputArray.sort((a,b)=>a-b)
-    console.log(sorted)
+
+    let inputArrayCopy = [...inputArray]
+
+    let sorted = inputArrayCopy.sort((a, b) => a - b)
+
     let middle = sorted[1]
-    console.log(Number(middle))
-    let middled = inputArray.indexOf(Number(middle))
-    console.log(middled)
-    console.log(typeof(middle))
-    };
+
+    return (inputArray.indexOf(middle))
+
+};
