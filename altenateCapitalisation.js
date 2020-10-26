@@ -3,11 +3,24 @@
 //The input will be a lowercase string with no spaces.
 
 function capitalize(s){
-    let arrayOfLetters = s.split('')
-    let sort = arrayOfLetters.map((letter)=>{
-      if(indexOf(letter) % 2 === 0){
-        return letter.toUpperCase()
-      } return letter
-    })
-    console.log(sort)
-    };
+
+  let even = []
+  let odd = []
+    
+  for(i = 0; i < s.length; i++){
+    if(i % 2 === 0){
+     even.push(s[i].toUpperCase())
+    }
+    else even.push(s[i])
+  }
+    
+    for(i = 0; i < s.length; i++){
+    if(i % 2 === 0){
+     odd.push(s[i])
+    }
+    else odd.push(s[i].toUpperCase())
+  }
+    
+    let together = [String(even.join('')), (String(odd.join('')))]
+    return together
+  };
