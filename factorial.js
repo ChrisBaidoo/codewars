@@ -12,11 +12,14 @@ function factorial(n)
   if(n === 0){
     return 1
   }  
-    
+  
+  if(n < 0 || n > 12){
+   throw new RangeError("Must be lower than 12 and higher than 0 ")
+  }
+
   let numbers = [] 
   for (let i = 1; i <= n; i++){
     numbers.push(i)
   }
   return (eval(numbers.sort((a,b)=>b-a).join('*')))
-  
 }
