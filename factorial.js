@@ -9,10 +9,12 @@
 
 function factorial(n)
 {
+
   if(n === 0){
     return 1
   }  
   
+  //If the inout is below 0 or above 12 throw an exception error
   if(n < 0 || n > 12){
    throw new RangeError("Must be lower than 12 and higher than 0 ")
   }
