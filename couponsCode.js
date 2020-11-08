@@ -11,12 +11,14 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
     console.log(currentDate)
       console.log( expirationDate)
   if (enteredCode == correctCode && currentDate == expirationDate){
-    console.log('yes')
+
   }
    
     let time = new Date()
     
     var n = time.getMonth()
+    var m = time.getHours()
+
     
     console.log(n + 1)
     
