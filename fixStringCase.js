@@ -3,5 +3,14 @@
 //if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
 
 function solve(s){
-    console.log(s)
-}
+    let uppercase = ''
+      
+      for(let i = 0; i < s.length; i++)
+      if (s[i] == s[i].toUpperCase())
+      uppercase += s[i]
+      
+      if(uppercase.length == 3){
+        return s.toUpperCase()
+      }
+      return s.toLowerCase()
+    }
