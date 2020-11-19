@@ -4,13 +4,20 @@
 
 function solve(s){
     let uppercase = ''
+    let lowercase = ''
+    
       
       for(let i = 0; i < s.length; i++)
       if (s[i] == s[i].toUpperCase())
       uppercase += s[i]
+      if (s[i] == s[i].toLowerCase())
+      lowercase += s[i]
       
       if(uppercase.length == 3){
         return s.toUpperCase()
       }
       return s.toLowerCase()
+      
+      console.log(lowercase)
+
     }
