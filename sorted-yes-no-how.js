@@ -5,12 +5,15 @@ function isSortedAndHow(array) {
     let descending = newArrayForDescending.sort((a,b)=>b-a)
     
     if(JSON.stringify(array)==JSON.stringify(ascending)){
-  return "yes, ascending"  } 
-    else if (JSON.stringify(array)==JSON.stringify(descending)){
-    return "yes, descending"
+      return "yes, ascending"  
+    } 
+    else if (JSON.stringify(array)==JSON.stringify(descending))
+    {
+      return "yes, descending"
     }
     else 
       {
-  return "no"    }
+      return "no"    
+      }
     
   }
