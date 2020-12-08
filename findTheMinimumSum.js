@@ -10,7 +10,14 @@
 //You will be always given non-empty array containing Positive values.
 
 
+
 function sumOfMinimums(arr) {
-    let array = arr.map((item)=>{return item.map((inside)=>inside*2)})
-    console.log(array)
-  }
+  let tint = []
+  let array = arr.map((item)=>{return item.toString().})
+  let check = array.map((check)=>{
+    return Math.min(+check)
+  })
+      
+  console.log(array)
+  console.log(check)
+}
