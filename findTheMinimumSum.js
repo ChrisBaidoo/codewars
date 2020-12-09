@@ -12,12 +12,14 @@
 
 
 function sumOfMinimums(arr) {
-  let tint = []
-  let array = arr.map((item)=>{return item.toString().})
+  
+  let array = arr.map((item)=>{return item})
   let check = array.map((check)=>{
-    return Math.min(+check)
+    return Math.min(...check)
   })
-      
-  console.log(array)
-  console.log(check)
+  
+  let sumOfAll = eval(check.toString().replace(/,/g, '+'))
+  
+return sumOfAll
+
 }
