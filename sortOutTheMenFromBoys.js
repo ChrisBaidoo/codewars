@@ -9,7 +9,10 @@ function menFromBoys(arr){
       odd.push(arr[i])
       }
     }
-      console.log(even.sort((a, b)=> a-b))
-      console.log(odd)
+      
+      return [...new Set(even.sort((a, b)=> a-b)) , ...new Set(odd.sort((c, d)=> d-c)) ]
+    
+      
+      
     
     }
