@@ -6,3 +6,11 @@ function squareDigits(num) {
   let newNumbers = numbers.map((number) => number * number).join("");
   return Number(newNumbers);
 }
+
+//An altenative
+function squareDigits(num){
+  let array = Array.from(`${num}`).map((num)=>{
+    return num * num    
+  }).join('')
+  return  Number(array)
+}
