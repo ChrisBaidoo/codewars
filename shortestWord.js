@@ -7,3 +7,12 @@ function findShort(s) {
   let sorted = arrayFromString.sort((a, b) => a.length - b.length);
   return (shortest = sorted[0].length);
 }
+
+//An altenative solution 
+function findShort(s){
+  let newWords = s.split(' ').map((string)=>{
+    return string.length
+  })
+
+    return Math.min(...newWords)
+}
