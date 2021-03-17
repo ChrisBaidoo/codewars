@@ -18,3 +18,17 @@ function getSum(a, b) {
 
   return result;
 }
+
+//Alternative solution
+
+function getSum( a,b )
+{
+  let numbers = []
+  let max = Math.max(a,b)
+  let min = Math.min(a,b)
+  
+  for(let i = min; i <= max; i++){
+  numbers.push(i)
+}
+  return (eval(numbers.join("+")))
+}
