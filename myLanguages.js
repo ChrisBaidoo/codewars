@@ -9,7 +9,5 @@ function myLanguages(results) {
       
     let testScore =  Object.keys(results).filter(language => results[language] > 59).sort((a,b) => results[b] - results[a]);
     console.log(items)
-    
-    return testScore
-    
-    }
+    return testScore    
+}
