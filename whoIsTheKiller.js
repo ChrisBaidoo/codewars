@@ -12,9 +12,8 @@ function killer(suspectInfo, dead) {
       }
    }
 
+   
 //better attempt 
-
-
 
 function killer(suspectInfo, dead) {
     //your code here...
