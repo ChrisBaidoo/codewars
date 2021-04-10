@@ -2,16 +2,15 @@
 //You can assume that input is an array of integers. For an empty array return 0
 
 function mostFrequentItemCount(collection) {
-    let counter = []
-    let sorted = collection.sort((a, b)=> a - b)
+    if (collection.length === 0) return 0;
     
-    for(let i = 0; i <= sorted.length; i++){
-      if (sorted[i] === sorted[i + 1]) {
-        counter.push(sorted[i])
-        counter.push(sorted[i + 1])
-                     
-        } else return
-      console.log(counter.length)
-    }
+    var count = Object.create(null);
+      
+    collection.forEach( item => {
+      count[item] = (count[item] || 0) + 1;
+  
+    });
     
+    return Math.max(...Object.values(count));
+  
   }
