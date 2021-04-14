@@ -41,3 +41,21 @@ function isRubyComing(list) {
   let rubyDev = list.find((dev)=>dev.language == "Ruby")
   return rubyDev? true : false
   }
+
+
+/*
+You will be given an array of objects (associative arrays in PHP) representing data about developers who have
+signed up to attend the next coding meetup that you are organising.
+Your task is to return an object (associative array in PHP) which includes the count of each coding language 
+represented at the meetup. 
+*/
+
+function countLanguages(list) {
+  let obj = Object.create(null)
+  
+  list.forEach( item => {
+    obj[item] = (obj[item] || 0) + 1
+  })
+    
+    console.log(obj)
+  }
