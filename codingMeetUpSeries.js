@@ -54,8 +54,19 @@ function countLanguages(list) {
   let obj = Object.create(null)
   
   list.forEach( item => {
-    obj[item] = (obj[item] || 0) + 1
+    obj[item.language] = (obj[item.language] || 0) + 1
   })
     
-    console.log(obj)
+    return obj
   }
+
+/* 
+Your task is to return either:
+true if all developers in the list code in the same language; or
+false otherwise.
+*/
+
+function isSameLanguage(list) {
+  
+  list.forEach((dev)=>{console.log(dev.language)})
+ }
