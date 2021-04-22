@@ -89,7 +89,13 @@ input array.
 
 function findSenior(list) {
   let sort = list.sort((a, b) => {
-    return a.age - b.age;
+    return b.age - a.age;
   });
-  console.log(sort.length - 1);
+  let oldest = sort[0].age;
+
+  let test = list.filter((dev) => {
+    return dev.age === oldest;
+  });
+
+  return test;
 }
