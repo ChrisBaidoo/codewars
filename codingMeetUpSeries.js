@@ -88,14 +88,21 @@ input array.
 */
 
 function findSenior(list) {
-  let sort = list.sort((a, b) => {
-    return b.age - a.age;
+  let ages = list.map((dev) => {
+    return dev.age;
   });
-  let oldest = sort[0].age;
+  let oldest = Math.max(...ages);
 
-  let test = list.filter((dev) => {
+  let seniorDeveloper = list.filter((dev) => {
     return dev.age === oldest;
   });
 
-  return test;
+  return seniorDeveloper;
+}
+
+/* Altenative solution */
+
+function findSenior(list) {
+  var maxAge = Math.max(...list.map((person) => person.age));
+  return list.filter((person) => person.age === maxAge);
 }
