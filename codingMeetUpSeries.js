@@ -106,3 +106,18 @@ function findSenior(list) {
   var maxAge = Math.max(...list.map((person) => person.age));
   return list.filter((person) => person.age === maxAge);
 }
+
+/* Will all continents be represented?. Return true if all of the following continents / geographic 
+zones will be represented by at least one developer: 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania'.
+false otherwise. */
+
+function allContinents(list) {
+  let checker = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
+
+  let there = checker.forEach((cont) => {
+    list.map((dev) => {
+      console.log(dev.continent);
+    });
+  });
+  console.log(there);
+}
