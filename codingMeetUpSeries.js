@@ -121,3 +121,28 @@ function allContinents(list) {
   });
   console.log(there);
 }
+
+/* 
+Your task is to return:
+true if developers from all of the following age groups have signed up: 
+teens, twenties, thirties, forties, fifties, sixties, seventies, eighties, nineties, 
+centenarian (at least 100 years young).
+false otherwise.
+*/
+
+function isAgeDiverse(list) {
+  let conditionals = [
+    ((ele) => ele <= 19 && ele >= 10,
+    (ele) => ele <= 29 && ele >= 20,
+    (ele) => ele <= 39 && ele >= 30,
+    (ele) => ele <= 49 && ele >= 40,
+    (ele) => ele <= 59 && ele >= 50,
+    (ele) => ele <= 69 && ele >= 60,
+    (ele) => ele <= 79 && ele >= 70,
+    (ele) => ele <= 89 && ele >= 80,
+    (ele) => ele <= 99 && ele >= 90,
+    (ele) => ele >= 100),
+  ];
+
+  return conditionals.every((ele) => list.some((dev) => ele(dev.age)));
+}
