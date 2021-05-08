@@ -131,20 +131,42 @@ false otherwise.
 */
 
 function isAgeDiverse(list) {
-  let conditionals = [
-    ((ele) => ele <= 19 && ele >= 10,
-    (ele) => ele <= 29 && ele >= 20,
-    (ele) => ele <= 39 && ele >= 30,
-    (ele) => ele <= 49 && ele >= 40,
-    (ele) => ele <= 59 && ele >= 50,
-    (ele) => ele <= 69 && ele >= 60,
-    (ele) => ele <= 79 && ele >= 70,
-    (ele) => ele <= 89 && ele >= 80,
-    (ele) => ele <= 99 && ele >= 90,
-    (ele) => ele >= 100),
+  const ages = list.map((dev) => dev.age);
+
+  const teens = ages.filter((ele) => ele <= 19 && ele >= 13);
+
+  const twenties = ages.filter((ele) => ele <= 29 && ele >= 20);
+
+  const thirties = ages.filter((ele) => ele <= 39 && ele >= 30);
+
+  const fourties = ages.filter((ele) => ele <= 49 && ele >= 40);
+
+  const fifties = ages.filter((ele) => ele <= 59 && ele >= 50);
+
+  const sixties = ages.filter((ele) => ele <= 69 && ele >= 60);
+
+  const seventies = ages.filter((ele) => ele <= 79 && ele >= 70);
+
+  const eighties = ages.filter((ele) => ele <= 89 && ele >= 80);
+
+  const ninties = ages.filter((ele) => ele <= 99 && ele >= 90);
+
+  const hundreds = ages.filter((ele) => ele >= 100);
+
+  let all = [
+    teens,
+    twenties,
+    thirties,
+    fourties,
+    fifties,
+    sixties,
+    seventies,
+    eighties,
+    ninties,
+    hundreds,
   ];
 
-  return conditionals.every((ele) => list.some((dev) => ele(dev.age)));
+  return all.every((group) => group.length >= 1);
 }
 
 /* Write a function that adds the username property to each object in the input array:*/

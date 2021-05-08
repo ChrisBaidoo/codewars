@@ -3,10 +3,19 @@
 //The function takes a name as its only argument, and returns one of the following strings:
 
 function areYouPlayingBanjo(name) {
-    let beginsWithR = name.toUpperCase().split("").splice(0,1).join("")
-    console.log(beginsWithR)
-    if(beginsWithR === "R"){
-      return `${name} plays banjo`
-    }
-   return `${name} does not play banjo`
+  let beginsWithR = name.toUpperCase().split("").splice(0, 1).join("");
+  console.log(beginsWithR);
+  if (beginsWithR === "R") {
+    return `${name} plays banjo`;
   }
+  return `${name} does not play banjo`;
+}
+
+
+const check = ages.filter((ele)=>{
+    ele <= 19 && ele >= 13
+  
+  
+  console.log(check)
+  
+    
