@@ -112,14 +112,12 @@ zones will be represented by at least one developer: 'Africa', 'Americas', 'Asia
 false otherwise. */
 
 function allContinents(list) {
-  let checker = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
+  let continents = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 
-  let there = checker.forEach((cont) => {
-    list.map((dev) => {
-      console.log(dev.continent);
-    });
+  let continentOfDev = list.map((dev) => {
+    return dev.continent;
   });
-  console.log(there);
+  return continents.every((continent) => continentOfDev.includes(continent));
 }
 
 /* 
