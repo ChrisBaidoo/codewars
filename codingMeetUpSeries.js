@@ -170,11 +170,15 @@ function isAgeDiverse(list) {
 /* Write a function that adds the username property to each object in the input array:*/
 
 function addUsername(list) {
-  let username = list.map(
-    (dev) =>
-      `${dev.firstName.toLowerCase()}${dev.lastName
-        .toLowerCase()
-        .slice(0, -1)}${eval(2021 - dev.age)}`
-  );
-  console.log(username);
+  let date = new Date();
+  let year = date.getFullYear();
+
+  let updatedList = list.map((dev) => {
+    dev.username = `${dev.firstName.toLowerCase()}${dev.lastName
+      .toLowerCase()
+      .slice(0, -1)}${eval(year - dev.age)}`;
+    return dev;
+  });
+
+  return updatedList;
 }
