@@ -187,11 +187,9 @@ function addUsername(list) {
 //only the JavaScript developers who are GitHub admins:
 
 function findAdmin(list, lang) {
-  let gAdmin = [];
+  let javaScriptDevelopers = list.filter(
+    (dev) => dev.language === lang && dev.githubAdmin === "yes"
+  );
 
-  return (gAdmin = list.map((dev) => {
-    if (dev.language === lang && dev.githubAdmin === "yes") {
-      return dev;
-    }
-  }));
+  return javaScriptDevelopers;
 }
