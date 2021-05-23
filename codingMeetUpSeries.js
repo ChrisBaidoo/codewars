@@ -193,3 +193,21 @@ function findAdmin(list, lang) {
 
   return javaScriptDevelopers;
 }
+
+// Is the meetup language-diverse?
+/* Your task is to return either:
+true if the number of meetup participants representing any of the three programming languages 
+is ** at most 2 times higher than the number of developers representing any of the remaining 
+programming languages**; or
+false otherwise.*/
+
+function isLanguageDiverse(list) {
+  const languages = list.map((dev) => dev.language).sort((a, b) => a - b);
+  console.log(languages);
+
+  for (let i = 0; i <= languages.length; i++) {
+    if (languages[i] === languages[i + 1]) {
+      console.log("hello");
+    }
+  }
+}
