@@ -202,12 +202,15 @@ programming languages**; or
 false otherwise.*/
 
 function isLanguageDiverse(list) {
-  const languages = list.map((dev) => dev.language).sort((a, b) => a - b);
-  console.log(languages);
+  const javascript = [];
+  const python = "Python";
+  const ruby = "Ruby";
 
-  for (let i = 0; i <= languages.length; i++) {
-    if (languages[i] === languages[i + 1]) {
-      console.log("hello");
+  list.map((dev) => {
+    if (dev.language === "JavaScript") {
+      javascript.push(dev);
     }
-  }
+  });
+
+  console.log(javascript);
 }
