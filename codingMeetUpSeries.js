@@ -211,6 +211,4 @@ function isLanguageDiverse(list) {
       javascript.push(dev);
     }
   });
-
-  console.log(javascript);
 }
