@@ -202,17 +202,18 @@ programming languages**; or
 false otherwise.*/
 
 function isLanguageDiverse(list) {
-  const javascript = list
-    .filter((dev) => dev.language === "JavaScript")
-    .map((dev) => dev.language);
-  const python = list
-    .filter((dev) => dev.language === "Python")
-    .map((dev) => dev.language);
-  const ruby = list
-    .filter((dev) => dev.language === "Ruby")
-    .map((dev) => dev.language);
+  const javascript = list.filter((dev) => dev.language === "JavaScript").length;
+  const python = list.filter((dev) => dev.language === "Python").length;
+  const ruby = list.filter((dev) => dev.language === "Ruby").length;
 
-  const all = [javascript, python, ruby];
-
-  return all.every((group) => group.length <= 2);
+  if (javascript / 2 > python || javascript / 2 > ruby) {
+    return false;
+  }
+  if (python / 2 > javascript || python / 2 > ruby) {
+    return false;
+  }
+  if (ruby / 2 > python || ruby / 2 > javascript) {
+    return false;
+  }
+  return true;
 }
