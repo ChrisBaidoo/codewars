@@ -217,3 +217,34 @@ function isLanguageDiverse(list) {
   }
   return true;
 }
+
+/* Your task is to return an object which includes the count of food options selected by the 
+developers on the meetup sign-up form.. */
+
+function orderFood(list) {
+  let food = {
+    vegetarian: 0,
+    standard: 0,
+    vegan: 0,
+    diabetic: 0,
+    "gluten-intolerant": 0,
+  };
+  list.map((dev) => {
+    if (dev.meal === "vegetarian") {
+      food.vegetarian++;
+    }
+    if (dev.meal === "vegan") {
+      food.vegan++;
+    }
+    if (dev.meal === "diabetic") {
+      food.diabetic++;
+    }
+    if (dev.meal === "gluten-intolerant") {
+      food.gluten - intolerant++;
+    }
+    if (dev.meal === "standard") {
+      food.standard++;
+    }
+  });
+  console.log(food);
+}
