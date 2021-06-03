@@ -229,7 +229,7 @@ function orderFood(list) {
     diabetic: 0,
     "gluten-intolerant": 0,
   };
-  list.map((dev) => {
+  const foodies = list.map((dev) => {
     if (dev.meal === "vegetarian") {
       food.vegetarian++;
     }
@@ -240,11 +240,12 @@ function orderFood(list) {
       food.diabetic++;
     }
     if (dev.meal === "gluten-intolerant") {
-      food.gluten - intolerant++;
+      food[4]++;
     }
     if (dev.meal === "standard") {
       food.standard++;
     }
+    return;
   });
   console.log(food);
 }
