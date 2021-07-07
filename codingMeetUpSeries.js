@@ -222,30 +222,24 @@ function isLanguageDiverse(list) {
 developers on the meetup sign-up form.. */
 
 function orderFood(list) {
-  let food = {
-    vegetarian: 0,
-    standard: 0,
-    vegan: 0,
-    diabetic: 0,
-    "gluten-intolerant": 0,
-  };
-  const foodies = list.map((dev) => {
-    if (dev.meal === "vegetarian") {
-      food.vegetarian++;
+  let food = {};
+  list.forEach((dev) => {
+    let meal = dev.meal;
+    if (!food[meal]) {
+      food[meal] = 0;
     }
-    if (dev.meal === "vegan") {
-      food.vegan++;
-    }
-    if (dev.meal === "diabetic") {
-      food.diabetic++;
-    }
-    if (dev.meal === "gluten-intolerant") {
-      food[4]++;
-    }
-    if (dev.meal === "standard") {
-      food.standard++;
-    }
-    return;
+    food[meal] = food[meal] + 1;
   });
-  console.log(food);
+  return food;
+}
+
+//Altenative solution
+function orderFood(list) {
+  let food = {};
+  list.forEach((dev) => {
+    let meal = dev.meal;
+
+    food[meal] = (food[meal] || 0) + 1;
+  });
+  return food;
 }
