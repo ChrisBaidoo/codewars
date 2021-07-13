@@ -237,9 +237,21 @@ function orderFood(list) {
 function orderFood(list) {
   let food = {};
   list.forEach((dev) => {
-    let meal = dev.meal;
+    const { meal } = dev;
 
     food[meal] = (food[meal] || 0) + 1;
   });
   return food;
+}
+
+/*Your task is to return an array where each object will have a new property 'greeting' with the following string value:
+Hi < firstName here >, what do you like the most about < language here >? */
+
+function greetDevelopers(list) {
+  const updatedList = list.map((obj) => {
+    obj.greeting = `Hi ${obj.firstName}, what do you like the most about ${obj.language}?`;
+    return obj;
+  });
+
+  return updatedList;
 }
