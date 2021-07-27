@@ -255,3 +255,13 @@ function greetDevelopers(list) {
 
   return updatedList;
 }
+
+/* write a function that adds the question property to each object in the input array where the developer has not provided the 
+relevant details (marked with a null value). The value of the question property 
+should be the following string: */
+
+function askForMissingDetails(list) {
+  for (var key in list) {
+    const filtered = list[key] !== null;
+  }
+}
