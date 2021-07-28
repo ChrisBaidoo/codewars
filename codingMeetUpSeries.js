@@ -261,7 +261,12 @@ relevant details (marked with a null value). The value of the question property
 should be the following string: */
 
 function askForMissingDetails(list) {
-  for (var key in list) {
-    const filtered = list[key] !== null;
-  }
+  const item = list.map((dev) => {
+    return getKeyByValue(dev, null);
+  });
+
+  console.log(item);
+}
+function getKeyByValue(object, value) {
+  return Object.keys(object).find((key) => object[key] === value);
 }
