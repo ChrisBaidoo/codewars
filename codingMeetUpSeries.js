@@ -59,6 +59,20 @@ function countLanguages(list) {
   return obj;
 }
 
+//Altenative solution
+function countLanguages(list) {
+  let obj = {};
+
+  list.forEach((dev) => {
+    const { language } = dev;
+    if (!obj[language]) {
+      obj[language] = 0;
+    }
+    obj[language] = obj[language] + 1;
+  });
+  return obj;
+}
+
 /* 
 Your task is to return either:
 true if all developers in the list code in the same language; or
@@ -269,4 +283,16 @@ function askForMissingDetails(list) {
 }
 function getKeyByValue(object, value) {
   return Object.keys(object).find((key) => object[key] === value);
+}
+
+//Write a function that when executed as findOddNames(list1) returns only the developers where if you add the ASCII
+//representation of all characters in their first names, the result will be an odd number
+
+function findOddNames(list) {
+  return list.filter((dev) => {
+    let ascii = dev.firstName
+      .split("")
+      .reduce((count, letter) => count + letter.charCodeAt(0), 0);
+    return ascii % 2 == 1;
+  });
 }
