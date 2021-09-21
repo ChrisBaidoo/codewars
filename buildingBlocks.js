@@ -18,6 +18,22 @@ Define these methods:
 
 class Block {
   constructor(data) {
-    console.log(data);
+    (this.width = data[0]), (this.length = data[1]), (this.height = data[2]);
+  }
+
+  getWidth() {
+    return this.width;
+  }
+
+  getLength() {
+    return this.length;
+  }
+
+  getHeight() {
+    return this.height;
+  }
+
+  getVolume() {
+    return;
   }
 }
