@@ -34,6 +34,12 @@ class Block {
   }
 
   getVolume() {
-    return;
+    return this.width * this.length * this.height;
+  }
+
+  getSurfaceArea() {
+    let a = this.length * this.length;
+    let b = a * 6;
+    return b;
   }
 }
