@@ -38,8 +38,10 @@ class Block {
   }
 
   getSurfaceArea() {
-    let a = this.length * this.length;
-    let b = a * 6;
-    return b;
+    let a = this.length * this.width * 2;
+    let b = this.height * this.width * 2;
+    let c = this.length * this.height * 2;
+    let d = a + b + c;
+    return d;
   }
 }
