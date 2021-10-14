@@ -28,3 +28,21 @@ function splitTheBill(x) {
 
   return x;
 }
+
+/* 
+Altenative solution
+*/
+
+function splitTheBill(x) {
+  const values = Object.values(x);
+  const total = values.reduce((a, c) => a + c);
+  const average = total / values.length;
+
+  const result = {};
+  for (const [key, value] of Object.entries(x)) {
+    console.log(`${key}: ${value - average}`);
+    const rounded = Math.round((value - average) * 100) / 100;
+    result[key] = rounded;
+  }
+  return result;
+}
