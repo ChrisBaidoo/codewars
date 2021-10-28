@@ -6,3 +6,16 @@ class Cat extends Animal {
     return this.name + " meows.";
   }
 }
+
+//alternative solution
+
+class Cat extends Animal {
+  constructor(name) {
+    super(name);
+  }
+  speak() {
+    return `${this.name} meows.`;
+  }
+}
+
+//https://www.youtube.com/watch?v=RBLIm5LMrmc
