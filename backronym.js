@@ -1,14 +1,15 @@
-var makeBackronym = function (string) {
+const makeBackronym = function (string) {
   const array = string.toUpperCase().split("");
-  console.log(array);
 
-  const test = [];
+  const index = [];
+  const words = [];
 
   array.forEach((e, i) => {
-    test.push(i);
+    index.push(i);
   });
 
-  for (let i = 0; i < test.length; i++) {
-    console.log(dict[array[i]]);
+  for (let i = 0; i < index.length; i++) {
+    words.push(dict[array[i]]);
   }
+  return `${words.join(" ")}`;
 };
