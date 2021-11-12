@@ -15,17 +15,15 @@ class Dictionary {
     this.key;
     this.value;
   }
-
   newEntry(key, value) {
     this.key = key;
     this.value = value;
   }
-
   look(key) {
     if (key === this.key) {
       return this.value;
     } else {
-      return `Can't find entry for ${this.key} `;
+      return `Can't find entry for ${key}`;
     }
   }
 }
