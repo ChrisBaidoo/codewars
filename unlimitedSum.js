@@ -6,5 +6,7 @@ function sum(...a) {
 
   const numbers = arraryOfArgs.filter((elem) => typeof elem === "number");
 
-  console.log(numbers);
+  const sumNumbers = numbers.reduce((a, c) => a + c);
+
+  return sumNumbers;
 }
