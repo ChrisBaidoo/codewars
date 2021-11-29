@@ -4,8 +4,9 @@ The function should reject any arguments that are not integers, and sum the rema
 function sum(...a) {
   const arraryOfArgs = [...a];
 
-  const numbers = arraryOfArgs.filter((elem) => typeof elem === "number");
-
+  const numbers = arraryOfArgs.filter(
+    (elem) => typeof elem === "number" && elem % 1 === 0
+  );
   const sumNumbers = numbers.reduce((a, c) => a + c);
 
   return sumNumbers;
