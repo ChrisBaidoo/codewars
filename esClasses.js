@@ -18,16 +18,18 @@ class Cuboid {
     this.width = width;
     this.height = height;
   }
-  surfaceArea() {
+  get surfaceArea() {
     let a = this.length * this.width * 2;
     let b = this.height * this.width * 2;
     let c = this.length * this.height * 2;
     let d = a + b + c;
     return d;
   }
-  volume() {
+  get volume() {
     return this.width * this.length * this.height;
   }
 }
 
-class Cube extends Cuboid {}
+class Cube extends Cuboid {
+  constructor()
+}
