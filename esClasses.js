@@ -31,5 +31,12 @@ class Cuboid {
 }
 
 class Cube extends Cuboid {
-  constructor()
+  constructor(length) {
+    super(length);
+    this.lenght = length;
+    this.width = length;
+    this.height = length;
+  }
 }
+
+//https://www.youtube.com/watch?v=khuDeNwXkfI
