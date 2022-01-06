@@ -106,9 +106,18 @@ function isSameLanguage(list) {
   return test;
 }
 
-/* 
-Alternative solution
-*/
+//Alternative solution
+
+function isSameLanguage(list) {
+  return list.every((dev) => {
+    return dev.language === list[0].language;
+  });
+}
+
+//Alternative solution
+// Set only stores unique values and doesn't allow duplications of the same value. We can't have [1,1,4] in a Set.
+//But we can have [1,4]
+//We are checking that after adding all the language of the devs into the set, we only have one type of unique value.
 
 function isSameLanguage(list) {
   return new Set(list.map((dev) => dev.language)).size == 1;
