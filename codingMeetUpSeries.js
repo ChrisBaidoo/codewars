@@ -78,6 +78,20 @@ function countLanguages(list) {
   return obj;
 }
 
+//Altenative solution
+function countLanguages(list) {
+  let obj = {};
+
+  list.forEach((dev) => {
+    const { language } = dev;
+    if (!obj[language]) {
+      obj[language] = 0;
+    }
+    obj[language]++;
+  });
+  return obj;
+}
+
 /* 
 Your task is to return either:
 true if all developers in the list code in the same language; or
