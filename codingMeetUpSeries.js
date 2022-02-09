@@ -303,14 +303,20 @@ relevant details (marked with a null value). The value of the question property
 should be the following string: */
 
 function askForMissingDetails(list) {
-  const item = list.map((dev) => {
-    return getKeyByValue(dev, null);
-  });
-
-  console.log(item);
+  const item = list
+    .map((dev) => {
+      const nullKeys = getKeyByValue(dev);
+      if (nullKeys && nullKeys[0]) {
+        dev.question = `Hi, could you please provide your ${nullKeys[0]}.`;
+        return dev;
+      }
+    })
+    .filter((dev) => dev);
+  return item;
 }
-function getKeyByValue(object, value) {
-  return Object.keys(object).find((key) => object[key] === value);
+
+function getKeyByValue(obj) {
+  return Object.entries(obj).find(([key, value]) => value === null);
 }
 
 //Write a function that when executed as findOddNames(list1) returns only the developers where if you add the ASCII
