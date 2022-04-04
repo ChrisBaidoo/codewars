@@ -58,6 +58,20 @@ function countDevelopers(list) {
   return javascriptDevelopers.length;
 }
 
+//Altenative Solution
+
+function isRubyComing(list) {
+  const ruby = [];
+
+  for (let developer in list) {
+    const dev = list[developer];
+
+    if (dev.language === "Ruby") ruby.push(dev);
+  }
+  console.log(ruby.length);
+  return ruby.length >= 1 ? true : false;
+}
+
 /* 
 You will be given an array of objects (associative arrays in PHP) representing data about developers who have 
 signed up to attend the next coding meetup that you are organising.
