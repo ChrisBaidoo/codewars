@@ -81,7 +81,7 @@ false if there will be no Ruby developers.
 */
 
 function isRubyComing(list) {
-  let rubyDev = list.find((dev) => dev.language == "Ruby");
+  let rubyDev = list.find((dev) => dev.language === "Ruby");
   return rubyDev ? true : false;
 }
 
@@ -163,7 +163,7 @@ function isSameLanguage(list) {
 //We are checking that after adding all the language of the devs into the set, we only have one type of unique value.
 
 function isSameLanguage(list) {
-  return new Set(list.map((dev) => dev.language)).size == 1;
+  return new Set(list.map((dev) => dev.language)).size === 1;
 }
 
 /* 
