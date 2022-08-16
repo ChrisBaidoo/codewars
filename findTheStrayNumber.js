@@ -12,7 +12,7 @@ function stray(numbers) {
   let max = Math.max(...numbers);
 
   numbers.map((num) => {
-    if (num == max) {
+    if (num === max) {
       return groupA.push(num);
     }
     return groupB.push(num);

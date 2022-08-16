@@ -17,7 +17,7 @@ class Guesser {
     if (this.lives === 0) {
       throw new Error("You have no more life");
     }
-    if (n == this.number) {
+    if (n === this.number) {
       return true;
     }
     this.lives -= 1;

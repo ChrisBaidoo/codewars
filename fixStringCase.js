@@ -8,9 +8,9 @@ function solve(s){
     
       
       for(let i = 0; i < s.length; i++)
-      if (s[i] == s[i].toUpperCase())
+      if (s[i] === s[i].toUpperCase())
       uppercase += s[i]
-      if (s[i] == s[i].toLowerCase())
+      if (s[i] === s[i].toLowerCase())
       lowercase += s[i]
       
       if(uppercase.length == 3){

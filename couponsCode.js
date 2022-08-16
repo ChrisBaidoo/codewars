@@ -10,7 +10,7 @@
 function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
     console.log(currentDate)
       console.log( expirationDate)
-  if (enteredCode == correctCode && currentDate == expirationDate){
+  if (enteredCode === correctCode && currentDate === expirationDate){
 
   }
    

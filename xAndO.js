@@ -8,9 +8,9 @@ function XO(str) {
   let upperCase = str.toUpperCase();
 
   for (let i = 0; i <= upperCase.length; i++) {
-    if (upperCase[i] == "X") {
+    if (upperCase[i] === "X") {
       x.push(upperCase[i]);
-    } else if (upperCase[i] == "O") {
+    } else if (upperCase[i] === "O") {
       o.push(upperCase[i]);
     }
   }

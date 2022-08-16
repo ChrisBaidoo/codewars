@@ -6,6 +6,6 @@ function isIsogram(str) {
   if (arrayUppercase.length == 0) {
     return true;
   } else {
-    return arrayo.size == arrayUppercase.length ? true : false;
+    return arrayo.size === arrayUppercase.length ? true : false;
   }
 }
