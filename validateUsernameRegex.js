@@ -8,4 +8,3 @@ function validateUsr(username) {
   const pattern = /^([a-z0-9_]){4,16}$/    
   return pattern.test(username)
 }
-
