@@ -58,6 +58,19 @@ function countDevelopers(list) {
   return javascriptDevelopers.length;
 }
 
+//Altenative Solution: Destructuring
+
+function countDevelopers(list) {
+  const javascriptDevelopers = [];
+  list.forEach((dev) => {
+    const { language, continent } = dev;
+    if (language === "JavaScript" && continent === "Europe") {
+      javascriptDevelopers.push(dev);
+    }
+  });
+  return javascriptDevelopers.length;
+}
+
 /* 
 You will be given an array of objects (associative arrays in PHP) representing data about developers who have 
 signed up to attend the next coding meetup that you are organising.
