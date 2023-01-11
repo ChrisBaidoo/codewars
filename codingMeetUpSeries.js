@@ -206,7 +206,7 @@ function findSenior(list) {
 /* Altenative solution */
 
 function findSenior(list) {
-  var maxAge = Math.max(...list.map((person) => person.age));
+  const maxAge = Math.max(...list.map((person) => person.age));
   return list.filter((person) => person.age === maxAge);
 }
 
@@ -219,6 +219,17 @@ function allContinents(list) {
 
   let continentOfDev = list.map((dev) => {
     return dev.continent;
+  });
+  return continents.every((continent) => continentOfDev.includes(continent));
+}
+
+//Altenative destructuring
+function allContinents(list) {
+  let continents = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
+
+  let continentOfDev = list.map((dev) => {
+    const { continent } = dev;
+    return continent;
   });
   return continents.every((continent) => continentOfDev.includes(continent));
 }
@@ -295,6 +306,18 @@ function findAdmin(list, lang) {
   );
 
   return javaScriptDevelopers;
+}
+
+//Altenative solution
+
+function findAdmin(list, lang) {
+  let javascriptDev = list.filter((dev) => {
+    const { language, githubAdmin } = dev;
+    if (language === lang && githubAdmin === "yes") {
+      return dev;
+    }
+  });
+  return javascriptDev;
 }
 
 // Is the meetup language-diverse?
