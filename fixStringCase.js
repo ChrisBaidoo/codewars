@@ -2,22 +2,38 @@
 //make as few changes as possible.
 //if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
 
-function solve(s){
-    let uppercase = ''
-    let lowercase = ''
-    
-      
-      for(let i = 0; i < s.length; i++)
-      if (s[i] === s[i].toUpperCase())
-      uppercase += s[i]
-      if (s[i] === s[i].toLowerCase())
-      lowercase += s[i]
-      
-      if(uppercase.length == 3){
-        return s.toUpperCase()
-      }
-      return s.toLowerCase()
-      
-      console.log(lowercase)
+function solve(s) {
+  let uppercase = "";
+  let lowercase = "";
 
+  for (let i = 0; i < s.length; i++)
+    if (s[i] === s[i].toUpperCase()) uppercase += s[i];
+  if (s[i] === s[i].toLowerCase()) lowercase += s[i];
+
+  if (uppercase.length == 3) {
+    return s.toUpperCase();
+  }
+  return s.toLowerCase();
+}
+
+//Altenate solution
+function solve(s) {
+  let uppercase = "";
+  let lowercase = "";
+
+  const array = s.split("");
+
+  const chek = array.map((e) => {
+    if (e === e.toLowerCase()) {
+      return (lowercase += e);
     }
+    return (uppercase += e);
+  });
+
+  if (uppercase.length === 3) {
+    return array.join("").toUpperCase();
+  }
+  if (lowercase.length === 3) {
+    return array.join("").toLoweerCase();
+  }
+}
