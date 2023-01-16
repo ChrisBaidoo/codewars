@@ -23,17 +23,16 @@ function solve(s) {
 
   const array = s.split("");
 
-  const chek = array.map((e) => {
+  array.map((e) => {
     if (e === e.toLowerCase()) {
       return (lowercase += e);
     }
     return (uppercase += e);
   });
 
-  if (uppercase.length === 3) {
-    return array.join("").toUpperCase();
-  }
-  if (lowercase.length === 3) {
-    return array.join("").toLoweerCase();
+  if (lowercase.length >= uppercase.length) {
+    return s.toLowerCase();
+  } else {
+    return s.toUpperCase();
   }
 }
