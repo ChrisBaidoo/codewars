@@ -41,3 +41,21 @@ function capitalize(s) {
   let together = [String(even.join("")), String(odd.join(""))];
   return together;
 }
+
+//Another altenative
+function capitalize(s) {
+  let even = [];
+  let odd = [];
+
+  s.split("").map((x, i) => {
+    if (i % 2 === 0) {
+      even.push(x.toUpperCase());
+      odd.push(x);
+    } else {
+      even.push(x);
+      odd.push(x.toUpperCase());
+    }
+  });
+
+  return [String(even.join("")), String(odd.join(""))];
+}
