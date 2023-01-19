@@ -21,3 +21,22 @@ function openOrSenior(data) {
 
   return result;
 }
+
+//Altenative using map
+
+function openOrSenior(data) {
+  const result = [];
+
+  data.map((x) => {
+    if (x[0] >= 55 && x[1] > 7) {
+      result.push("Senior");
+    } else result.push("Open");
+  });
+
+  return result;
+}
+
+//Another altenative
+return data.map(([age, handicap]) => {
+  return age >= 55 && handicap > 7 ? "Senior" : "Open";
+});
