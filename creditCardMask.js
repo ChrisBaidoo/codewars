@@ -15,3 +15,8 @@ function maskify(cc) {
 
   return array.join("");
 }
+
+// Altenative solution
+function maskify(cc) {
+  return cc.replace(/(?=.{5})./g, "#");
+}
