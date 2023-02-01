@@ -11,13 +11,15 @@ function incrementer(nums) {
   if (!nums) {
     return null;
   }
-  let val = [];
+  const val = [];
   const add = nums.map((e, i) => {
     val.push(e + i + 1);
   });
   const test = val.map((e) => {
     if (e.toString().length >= 2) {
-      console.log("hello");
+      return Number(e.toString()[1]);
     }
+    return e;
   });
+  return test;
 }
