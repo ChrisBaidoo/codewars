@@ -36,3 +36,10 @@ function candies(kids) {
   );
   return totalDiff;
 }
+
+//Altenative solution
+
+const candies = (kids) =>
+  kids.length > 1
+    ? kids.reduce((pre, val) => pre + Math.max(...kids) - val, 0)
+    : -1;
