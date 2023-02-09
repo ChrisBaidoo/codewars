@@ -5,10 +5,9 @@ spaces. Spaces will be included only when more than one word is present.
 */
 
 function spinWords(string) {
-  const array = string.split(" ");
-  console.log(array);
-  const jk = array.map((item) => {
+  const turnToArray = string.split(" ");
+  const reverse = turnToArray.map((item) => {
     return item.length >= 5 ? item.split("").reverse().join("") : item;
   });
-  return String(jk);
+  return String(reverse).replace(/,/g, " ");
 }
