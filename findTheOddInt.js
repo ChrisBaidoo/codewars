@@ -12,20 +12,18 @@ Examples
 
 */
 
-function findOdd(A) {
-  const count = {};
-  //happy coding!
+const count = {};
+//happy coding!
 
-  A.forEach((item) => {
-    if (!count[item]) {
-      count[item] = 0;
-    }
-    count[item] = count[item] += 1;
-  });
+A.forEach((item) => {
+  if (!count[item]) {
+    count[item] = 0;
+  }
+  count[item] = count[item] += 1;
+});
 
-  Object.values(count).forEach(function (key) {
-    if (key % 2 == 1) {
-      console.log(Object.keys(count));
-    }
-  });
+for (const [key, value] of Object.entries(count)) {
+  if (value % 2 == 1) {
+    return Number(key);
+  }
 }
