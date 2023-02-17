@@ -27,3 +27,9 @@ for (const [key, value] of Object.entries(count)) {
     return Number(key);
   }
 }
+
+//Altenative solution
+
+function findOdd(arr) {
+  return arr.find((item, index) => arr.filter((el) => el == item).length % 2);
+}
