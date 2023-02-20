@@ -14,3 +14,13 @@ var countBits = function (n) {
     });
   return Number(totalOnes);
 };
+
+//Altenative Solutions
+
+countBits = (n) => n.toString(2).split("0").join("").length;
+
+const countBits = (n) =>
+  n
+    .toString(2)
+    .split("")
+    .filter((ele) => ele == 1).length;
