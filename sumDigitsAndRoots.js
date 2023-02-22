@@ -16,14 +16,18 @@ function digitalRoot(n) {
   }
   const hj = String(n)
     .split("")
-    .reduce((a, b) => Number(a) + Number(b));
+    .reduce((a, b) => {
+      return Number(a) + Number(b);
+    }, 0);
   console.log(typeof hj);
   const valAsString = hj.toString();
   console.log(typeof valAsString);
 
   if (valAsString.length !== 1) {
     console.log("true");
-    const val = valAsString.split("").reduce((a, b) => Number(a) + Number(b));
+    const val = valAsString.split("").reduce((a, b) => {
+      return Number(a) + Number(b);
+    }, 0);
     return Number(val);
   } else {
     return hj;
