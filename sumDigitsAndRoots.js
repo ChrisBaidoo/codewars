@@ -33,3 +33,13 @@ function digitalRoot(n) {
     return hj;
   }
 }
+
+/* After trying loops to no avail this mathematical approach seems to work 
+https://en.wikipedia.org/wiki/Casting_out_nines
+*/
+function digitalRoot(n) {
+  if (n === 0) {
+    return n;
+  }
+  return n % 9 || 9;
+}
