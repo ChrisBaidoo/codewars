@@ -16,20 +16,14 @@ function findOutlier(integers) {
   const odd = [];
   const even = [];
   integers.map((num) => {
-    if (num % 2 == 0) {
+    if (num % 2 === 0) {
       even.push(num);
-    }
-    if (num % 2 == 1) {
+    } else {
       odd.push(num);
     }
   });
-  console.log(integers);
-  console.log("odd", odd);
-  console.log("even", even);
   if (odd.length === 1) {
     return odd[0];
   }
-  if (even.length === 1) {
-    return even[0];
-  }
+  return even[0];
 }
