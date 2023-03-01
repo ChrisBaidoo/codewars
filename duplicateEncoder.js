@@ -10,3 +10,8 @@ Examples
 "(( @"     =>  "))((" 
 
 */
+
+function duplicateEncode(word){
+const lowerCase = word.toLowerCase()
+}
+
