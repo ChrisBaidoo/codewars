@@ -3,7 +3,7 @@ function alphabetPosition(text) {
     .toLowerCase()
     .replace(/[\s\'\.]/g, "")
     .split("");
-
+  const lettersIndex = [];
   const alphabet = [
     "a",
     "b",
@@ -32,10 +32,10 @@ function alphabetPosition(text) {
     "y",
     "z",
   ];
-  const result = lowerCaseText.map((a) => {
+  lowerCaseText.map((a) => {
     if (alphabet.indexOf(a) != -1) {
-      return alphabet.indexOf(a) + 1;
+      lettersIndex.push(alphabet.indexOf(a) + 1);
     }
   });
-  return result.join(" ");
+  return lettersIndex.join(" ");
 }
