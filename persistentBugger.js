@@ -9,9 +9,8 @@ For example (Input --> Output):
 4 --> 0 (because 4 is already a one-digit number)
 
 */
-function persistence(num) {
-  if (num.length === 1) {
-    return num;
-  }
-  console.log(String(num).split("").join("*"));
-}
+const persistence = (num) => {
+  return `${num}`.length > 1
+    ? 1 + persistence(`${num}`.split("").reduce((a, b) => a * +b))
+    : 0;
+};
