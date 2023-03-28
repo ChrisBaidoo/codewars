@@ -15,3 +15,8 @@ const uniqueInOrder = function (iterable) {
   });
   return uniqueValues;
 };
+
+//Altenative solution
+const uniqueInOrder = function (iterable) {
+  return [...iterable].filter((a, i) => a !== iterable[i - 1]);
+};
