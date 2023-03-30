@@ -13,6 +13,13 @@ Examples
 */
 
 function toCamelCase(str) {
-  let result = str.replace(/[-,_]/g, "");
-  console.log(result);
+  const turnToArray = str.split("");
+
+  turnToArray.map((a, i) => {
+    if (a === "-" || a === "_") {
+      return (turnToArray[i + 1] = turnToArray[i + 1].toUpperCase());
+    }
+  });
+
+  return turnToArray.join("").replace(/[-,_]/g, "");
 }
