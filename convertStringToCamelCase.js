@@ -23,3 +23,9 @@ function toCamelCase(str) {
 
   return turnToArray.join("").replace(/[-,_]/g, "");
 }
+
+// Altenative solution using just regex
+
+function toCamelCase(str) {
+  return str.replace(/[_-]\w/gi, (ch) => ch[1].toUpperCase());
+}
