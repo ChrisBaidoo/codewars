@@ -13,3 +13,8 @@ function solution(str) {
   const checkStringLength = str.length % 2 === 0 ? str : str + "_";
   return checkStringLength.match(/.{1,2}/g) ?? [];
 }
+
+// Altenative Solution
+function solution(s) {
+  return (s + "_").match(/.{2}/g) || [];
+}
