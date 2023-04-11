@@ -6,7 +6,8 @@ This is the first kata in series:
 */
 
 function findUniq(arr) {
-  let unique = arr.filter((letter, i) => {
-    return arr[i] != arr[i + 1];
+  let unique = arr.find((item) => {
+    return arr.indexOf(item) === arr.lastIndexOf(item);
   });
+  return unique;
 }
