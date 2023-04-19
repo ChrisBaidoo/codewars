@@ -11,8 +11,14 @@ If two words score the same, return the word that appears earliest in the origin
 
 All letters will be lowercase and all inputs will be valid.
 */
-
 function high(x) {
   const alphabets = "abcdefghijklmnopqrstuvwxyz".split("");
-  const words = x.split(" ");
+  const po = [];
+  const ks = x.split(" ");
+
+  const kl = ks.map((a) => {
+    return po.push(alphabets.indexOf(a) + 1);
+  });
+
+  return kl;
 }
