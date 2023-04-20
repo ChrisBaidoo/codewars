@@ -7,13 +7,5 @@ Example
 */
 
 function solution(string) {
-  const index = string.match(/[A-Z]/g).map(function (cap) {
-    return string.indexOf(cap);
-  });
-
-  const js = [...string].map((a) => {
-    if (string.indexOf(a) === index[0]) {
-      console.log(a);
-    }
-  });
+  return string.replace(/([A-Z])/g, " $1");
 }
