@@ -25,3 +25,17 @@ function digPow(n, p) {
     .reduce((s, d, i) => s + Math.pow(d, p + i), 0);
   return x % n ? -1 : x / n;
 }
+
+// Altenative solution
+function digPow(n, p) {
+  var ans =
+    ("" + n)
+      .split("")
+      .map(function (d, i) {
+        return Math.pow(+d, i + p);
+      })
+      .reduce(function (s, v) {
+        return s + v;
+      }) / n;
+  return ans % 1 ? -1 : ans;
+}
