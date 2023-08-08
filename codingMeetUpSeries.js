@@ -99,7 +99,6 @@ function isRubyComing(list) {
 
     if (dev.language === "Ruby") ruby.push(dev);
   }
-  console.log(ruby.length);
   return ruby.length >= 1 ? true : false;
 }
 
