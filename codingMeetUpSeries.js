@@ -159,11 +159,11 @@ false otherwise.
 */
 
 function isSameLanguage(list) {
-  let test = list.every((dev, i, arr) => {
+  let language = list.every((dev, i, arr) => {
     return dev.language === list[0].language;
   });
 
-  return test;
+  return language;
 }
 
 //Alternative solution
