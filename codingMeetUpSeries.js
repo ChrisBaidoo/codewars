@@ -107,6 +107,18 @@ function isRubyComing(list) {
   return Boolean(list.find((x) => x.language === "Ruby"));
 }
 
+//Altenative Solution
+function isRubyComing(list) {
+  let ruby = [];
+  list.forEach((dev) => {
+    const { language } = dev;
+    if (language === "Ruby") {
+      ruby.push(language);
+    }
+  });
+  return ruby.length >= 1;
+}
+
 /*
 You will be given an array of objects (associative arrays in PHP) representing data about developers who have
 signed up to attend the next coding meetup that you are organising.
