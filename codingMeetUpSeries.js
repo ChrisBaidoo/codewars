@@ -406,6 +406,17 @@ function greetDevelopers(list) {
   return updatedList;
 }
 
+//Altenative Solution
+function greetDevelopers(list) {
+  const updatedList = list.map((dev) => {
+    const { firstName, language } = dev;
+    dev.greeting = `Hi ${firstName}, what do you like the most about ${language}?`;
+    return dev;
+  });
+
+  return updatedList;
+}
+
 /* write a function that adds the question property to each object in the input array where the developer has not provided the 
 relevant details (marked with a null value). The value of the question property 
 should be the following string: */
